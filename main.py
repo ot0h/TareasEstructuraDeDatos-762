@@ -2,6 +2,21 @@ import os
 import subprocess
 
 
+def add_number(array: list[int]) -> list[int]:
+    print("=== AGREGAR UN NUMERO ===")
+
+    while True:
+        try:
+            number: int = int(input("Escribe el numero a ingresar: "))
+            print(f"Se agrego correctamente el numero: {number}")
+            break
+        except ValueError:
+            print("ERROR: Solo se puede ingresar numeros :P")
+
+    array.append(number)
+    return array
+
+
 def clear_screen():
     cmd = "cls" if os.name == "name" else "clear"
     subprocess.run(cmd, shell=True)
@@ -36,6 +51,10 @@ def main() -> None:
             try:
                 option: int = int(input("Ingresa una opción: "))
                 if 0 <= option <= 6:
+                    clear_screen()
+                    print(
+                        f"Se selecciono la opción {option}.",
+                    )
                     break
                 else:
                     print("Opción inválida. El número debe estar entre 0 y 6.")
@@ -44,7 +63,7 @@ def main() -> None:
 
         match option:
             case 1:
-                print("Agregar numero")
+                add_number(numeric_array)
             case 2:
                 print("Verificar")
             case 3:
