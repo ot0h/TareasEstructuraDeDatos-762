@@ -1,27 +1,15 @@
-# Tareas de Estructura de Datos - 762
+# Tarea 01: Pilas
 
-Repositorio para organizar y entregar las tareas del curso.
+Implementación de las operaciones básicas de una pila y conversión de expresiones infijas a postfijas.
 
-## Organización
+## Requisitos
 
-Cada tarea se desarrolla en su propia branch:
+- Python 3
 
-- `tarea-01-pilas`: implementación de pilas y conversión de expresiones.
-- `tarea-02-nombre`: descripción breve de la tarea.
+## Ejecutar
 
-La branch `main` contiene este README y la información general del repositorio. El código y los documentos de cada tarea están en la branch correspondiente.
+```bash
+python main.py
+```
 
-## Tareas
-
-| Tarea | Branch | Descripción |
-|---|---|---|
-| 01 | [`tarea-01-pilas`](../../tree/tarea-01-pilas) | Operaciones con pilas y conversión de notación infija a postfija |
-
-## Tecnologías
-
-- Python -> Para practicar
-
-## Autor
-
-Raul Isaac Moncada Vasquez
-Número De Cuenta: 62311465
+[← Volver al README principal](../../blob/main/README.md)
