@@ -17,8 +17,14 @@ def add_number(array: list[int]) -> list[int]:
     return array
 
 
-def is_full_array_numeric(numeric_array: list[int], size_limit_array) -> bool:
-    return True if len(numeric_array) == size_limit_array else False
+def is_full_array_numeric(
+    numeric_array: list[int], size_limit_array: int
+) -> bool | None:
+    if len(numeric_array) == 0:
+        print("ERROR: No se puede realizar esta función, se encuentra vacia la Pila")
+        return
+
+    return len(numeric_array) == size_limit_array
 
 
 def show_last_number_in_array(numeric_array: list[int]):
