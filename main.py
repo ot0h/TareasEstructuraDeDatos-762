@@ -147,6 +147,11 @@ def main() -> None:
             case 3:
                 delete_quantity_in_array(numeric_array)
             case 4:
+                if is_empty_pila(numeric_array) == True:
+                    print(
+                        "ERROR: Se encuentra vacia la pila debes utilizar otro metodo"
+                    )
+                    continue
                 print(f"ULTIMO NUMERO AGREGADO A LA PILA ES: {numeric_array[-1]}")
             case 5:
                 show_pila_seq_with_tope(numeric_array)
