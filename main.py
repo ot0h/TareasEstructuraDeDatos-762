@@ -39,6 +39,43 @@ def show_last_number_in_array(numeric_array: list[int]):
         print(f"{simbol_arrow} {'[TOPE]' if index == 0 else ''} {num}")
 
 
+def delete_quantity_in_array(array: list[int]):
+    print("=== QUITANDO ITEMS SEGUN CANTIDAD ===")
+
+    if len(array) == 0:
+        print("ERROR: No se puede realizar esta función, se encuentra vacia la Pila")
+        return
+
+    while True:
+        try:
+            cantidad_quitar: int = int(
+                input("Ingresa la cantidad de elementos a eliminar: ")
+            )
+            quantity_message: int = cantidad_quitar
+
+            if cantidad_quitar <= 0:
+                print("Por favor, ingresa una cantidad mayor a 0.")
+                continue
+
+            if len(array) < cantidad_quitar:
+                print(
+                    "No se puede quitar esa cantidad de numeros, es muy pequeña la PILA"
+                )
+                return
+
+            while cantidad_quitar != 0:
+                array.pop()
+                cantidad_quitar -= 1  # Reduces the counter by 1 each time
+
+            break
+
+        except ValueError:
+            print("ERROR: Se debe ingresar la cantidad en un numero entero")
+
+    print(f"Se quitaron los {quantity_message} elementos correctamente!")
+    return array
+
+
 def clear_screen():
     cmd = "cls" if os.name == "name" else "clear"
     subprocess.run(cmd, shell=True)
@@ -109,7 +146,7 @@ def main() -> None:
                     f"{'Ya se encuentra lleno el arreglo' if is_full_array_numeric(numeric_array, size_numeric_array) else f'Aun no esta lleno {len(numeric_array)}/{size_numeric_array}'}"
                 )
             case 3:
-                print("Sacar")
+                delete_quantity_in_array(numeric_array)
             case 4:
                 print(f"ULTIMO NUMERO AGREGADO A LA PILA ES: {numeric_array[-1]}")
             case 5:
