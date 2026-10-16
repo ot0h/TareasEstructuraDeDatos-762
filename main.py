@@ -28,6 +28,10 @@ def is_full_array_numeric(
 
 
 def show_last_number_in_array(numeric_array: list[int]):
+    if len(numeric_array) == 0:
+        print("ERROR: No se puede realizar esta función, se encuentra vacia la Pila")
+        return
+
     numeric_array.reverse()
 
     for index, num in enumerate(numeric_array):
