@@ -17,12 +17,11 @@ def add_number(array: list[int]) -> list[int]:
     return array
 
 
-def is_full_array_numeric(
-    numeric_array: list[int], size_limit_array: int
-) -> bool | None:
-    if len(numeric_array) == 0:
-        print("ERROR: No se puede realizar esta función, se encuentra vacia la Pila")
-        return
+def is_empty_pila(pila: list[int]) -> bool:
+    return len(pila) == 0
+
+
+def is_full_array_numeric(numeric_array: list[int], size_limit_array: int) -> bool:
 
     return len(numeric_array) == size_limit_array
 
@@ -42,7 +41,7 @@ def show_pila_seq_with_tope(numeric_array: list[int]):
 def delete_quantity_in_array(array: list[int]):
     print("=== QUITANDO ITEMS SEGUN CANTIDAD ===")
 
-    if len(array) == 0:
+    if is_empty_pila(array) == True:
         print("ERROR: No se puede realizar esta función, se encuentra vacia la Pila")
         return
 
@@ -143,7 +142,9 @@ def main() -> None:
 
             case 2:
                 print(
-                    f"{'Ya se encuentra lleno el arreglo' if is_full_array_numeric(numeric_array, size_numeric_array) else f'Aun no esta lleno {len(numeric_array)}/{size_numeric_array}'}"
+                    "La pila esta vacia"
+                    if is_empty_pila(numeric_array)
+                    else "La pila contiene elementos"
                 )
             case 3:
                 delete_quantity_in_array(numeric_array)
