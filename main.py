@@ -31,9 +31,7 @@ def show_pila_seq_with_tope(numeric_array: list[int]):
         print("ERROR: No se puede realizar esta función, se encuentra vacia la Pila")
         return
 
-    numeric_array.reverse()
-
-    for index, num in enumerate(numeric_array):
+    for index, num in enumerate(reversed(numeric_array)):
         simbol_arrow = "=" * 5 if index == 0 else " " * 11
         print(f"{simbol_arrow} {'[TOPE]' if index == 0 else ''} {num}")
 
