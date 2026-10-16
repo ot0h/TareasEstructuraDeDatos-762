@@ -101,7 +101,7 @@ def main() -> None:
             case 3:
                 print("Sacar")
             case 4:
-                print("Mostrar ultimo numero agregado")
+                print(f"ULTIMO NUMERO AGREGADO A LA PILA ES: {numeric_array[-1]}")
             case 5:
                 show_last_number_in_array(numeric_array)
             case 6:
