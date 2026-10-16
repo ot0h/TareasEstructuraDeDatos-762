@@ -86,7 +86,7 @@ def print_menu():
     2. Verificar si la pila está vacía
     3. Sacar varios números de la pila
     4. Ver el último número agregado
-    5. Mostrar cuántos números hay
+    5. Mostrar pila con TOPE
     6. Simular una secuencia de caracteres
     0. Salir
     ----------------------------------
