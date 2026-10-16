@@ -27,6 +27,8 @@ def show_last_number_in_array(numeric_array: list[int]):
     for index, num in enumerate(numeric_array):
         simbol_arrow = "=" * 5 if index == 0 else " " * 11
         print(f"{simbol_arrow} {'[TOPE]' if index == 0 else ''} {num}")
+
+
 def clear_screen():
     cmd = "cls" if os.name == "name" else "clear"
     subprocess.run(cmd, shell=True)
@@ -54,6 +56,18 @@ def main() -> None:
 
     exit: bool = False
 
+    print("Ingresando al programa .....")
+    print("Antes de continuar, debe establecer el tamaño del Arreglo Numerico.")
+
+    while True:
+        try:
+            size_numeric_array: int = int(
+                input("Ingresa el tamaño del Arreglo numero: ")
+            )
+            break
+        except ValueError:
+            print("Debe ser un numero entero")
+
     while not exit:
         print_menu()
 
@@ -73,15 +87,23 @@ def main() -> None:
 
         match option:
             case 1:
-                add_number(numeric_array)
+                if is_full_array_numeric(numeric_array, size_numeric_array) == False:
+                    add_number(numeric_array)
+                else:
+                    print(
+                        f"Ya el tamño del arreglo llego al maximo {size_numeric_array}/{size_numeric_array}"
+                    )
+
             case 2:
-                print("Verificar")
+                print(
+                    f"{'Ya se encuentra lleno el arreglo' if is_full_array_numeric(numeric_array, size_numeric_array) else f'Aun no esta lleno {len(numeric_array)}/{size_numeric_array}'}"
+                )
             case 3:
                 print("Sacar")
             case 4:
-                print("Ver el ultimo")
+                print("Mostrar ultimo numero agregado")
             case 5:
-                print("Mostrar")
+                show_last_number_in_array(numeric_array)
             case 6:
                 print("Simular")
             case 0:
