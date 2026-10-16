@@ -77,7 +77,7 @@ def delete_quantity_in_array(array: list[int]):
 
 
 def clear_screen():
-    cmd = "cls" if os.name == "name" else "clear"
+    cmd = "cls" if os.name == "nt" else "clear"
     subprocess.run(cmd, shell=True)
 
 
