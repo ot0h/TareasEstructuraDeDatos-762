@@ -17,6 +17,16 @@ def add_number(array: list[int]) -> list[int]:
     return array
 
 
+def is_full_array_numeric(numeric_array: list[int], size_limit_array) -> bool:
+    return True if len(numeric_array) == size_limit_array else False
+
+
+def show_last_number_in_array(numeric_array: list[int]):
+    numeric_array.reverse()
+
+    for index, num in enumerate(numeric_array):
+        simbol_arrow = "=" * 5 if index == 0 else " " * 11
+        print(f"{simbol_arrow} {'[TOPE]' if index == 0 else ''} {num}")
 def clear_screen():
     cmd = "cls" if os.name == "name" else "clear"
     subprocess.run(cmd, shell=True)
