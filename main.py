@@ -27,7 +27,7 @@ def is_full_array_numeric(
     return len(numeric_array) == size_limit_array
 
 
-def show_last_number_in_array(numeric_array: list[int]):
+def show_pila_seq_with_tope(numeric_array: list[int]):
     if len(numeric_array) == 0:
         print("ERROR: No se puede realizar esta función, se encuentra vacia la Pila")
         return
@@ -150,7 +150,7 @@ def main() -> None:
             case 4:
                 print(f"ULTIMO NUMERO AGREGADO A LA PILA ES: {numeric_array[-1]}")
             case 5:
-                show_last_number_in_array(numeric_array)
+                show_pila_seq_with_tope(numeric_array)
             case 6:
                 print("Simular")
             case 0:
