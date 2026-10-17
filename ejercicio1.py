@@ -73,6 +73,35 @@ def delete_quantity_in_array(array: list[int]):
     return array
 
 
+def quitar_o_agregar() -> None:
+    print("=== SECUENCIA ===")
+
+    pila_caracteres: list[str] = []
+
+    while True:
+        entrada = input(
+            "Ingresa un carácter, * para quitar el último o 0 para terminar: "
+        ).strip()
+
+        if entrada == "0":
+            print(f"El resultado es: {pila_caracteres}")
+            return
+
+        if entrada == "*":
+            if pila_caracteres:
+                eliminado = pila_caracteres.pop()
+                print(f"Se quitó: {eliminado}")
+            else:
+                print("La pila está vacía; no hay caracteres para quitar.")
+            continue
+
+        if len(entrada) != 1:
+            print("Ingresa solo un carácter.")
+            continue
+
+        pila_caracteres.append(entrada)
+
+
 def clear_screen():
     cmd = "cls" if os.name == "nt" else "clear"
     subprocess.run(cmd, shell=True)
@@ -96,7 +125,6 @@ def print_menu():
 
 def main() -> None:
     numeric_array: list[int] = []
-    characters_array: list[str] = []
 
     exit: bool = False
 
@@ -156,7 +184,7 @@ def main() -> None:
             case 5:
                 show_pila_seq_with_tope(numeric_array)
             case 6:
-                print("Simular")
+                quitar_o_agregar()
             case 0:
                 print("Saliendo del programa...")
                 exit = True

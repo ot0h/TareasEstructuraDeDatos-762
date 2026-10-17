@@ -9,7 +9,7 @@ Implementación de las operaciones básicas de una pila y conversión de expresi
 ## Ejecutar
 
 ```bash
-python main.py
+python ejercicio1.py
 ```
 
 [← Volver al README principal](../../blob/main/README.md)
