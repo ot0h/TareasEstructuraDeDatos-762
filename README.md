@@ -19,7 +19,8 @@ La branch `main` contiene este README y la información general del repositorio.
 
 ## Tecnologías
 
-- Python -> Para practicar
+- Python -> Para practicar.
+- Typst -> Para crear los pdfs de los ejercicios que no son relacionados a codigo.
 
 ## Autor
 
