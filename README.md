@@ -1,28 +1,26 @@
-# Tareas de Estructura de Datos - 762
+# Tarea 2: Analisis de problemas de colas
 
-Repositorio para organizar y entregar las tareas del curso.
+Realizando la tarea de analisis de problemas de colas.
 
-## Organización
+Donde  se eligieron los casos A y C
 
-Cada tarea se desarrolla en su propia branch:
+El informe para esta tarea es [INFORME](informe.pdf)
 
-- `tarea-01-pilas`: implementación de pilas y conversión de expresiones.
-- `tarea-02-nombre`: descripción breve de la tarea.
+## Archivos
 
-La branch `main` contiene este README y la información general del repositorio. El código y los documentos de cada tarea están en la branch correspondiente.
+- main.py -> Donde se realizo las pruebas de las colas
+- cola.py -> La clase padre de las colas, con sus metodos principales
+- cola_prioridad.py -> Clase de las colas de prioridades donde se se aplico un @dataclass que se puedeconsiderar como un struct en diferentes lenguajes, donde era de un Paciente con sus propiedades de mame y priority, donde ese priority se uso un enum.
+- cola_doble_entrada.py -> Clase para las colas de doble entrada, donde se definino los metodoas para ingresar un elemento al principio y final.
+- informe.typ -> Donde se estructuro el documento :V
 
-## Tareas
-
-| Tarea | Branch | Descripción |
-|---|---|---|
-| 01 | [`tarea-01-pilas`](../../tree/tarea-01-pilas) | Operaciones con pilas y conversión de notación infija a postfija |
+#> [!NOTE]
+Los archivos de cola_prioridad y cola_doble_entrada heredaron los metodos de cola.
+> 
 
 ## Tecnologías
 
-- Python -> Para practicar.
+- Python 
 - Typst -> Para crear los pdfs de los ejercicios que no son relacionados a codigo.
 
-## Autor
-
-Raul Isaac Moncada Vasquez
-Número De Cuenta: 62311465
+[← Volver al README principal](../../blob/main/README.md)
